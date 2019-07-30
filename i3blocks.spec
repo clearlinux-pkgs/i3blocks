@@ -4,7 +4,7 @@
 #
 Name     : i3blocks
 Version  : 1.4
-Release  : 1
+Release  : 2
 URL      : https://github.com/vivien/i3blocks/releases/download/1.4/i3blocks-1.4.tar.gz
 Source0  : https://github.com/vivien/i3blocks/releases/download/1.4/i3blocks-1.4.tar.gz
 Summary  : No detailed summary available
@@ -33,7 +33,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564524175
+export SOURCE_DATE_EPOCH=1564524299
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -42,11 +42,11 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-make  %{?_smp_mflags}
+make  %{?_smp_mflags} PREFIX=/usr
 
 
 %install
-export SOURCE_DATE_EPOCH=1564524175
+export SOURCE_DATE_EPOCH=1564524299
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/i3blocks
 cp COPYING %{buildroot}/usr/share/package-licenses/i3blocks/COPYING
