@@ -1,5 +1,5 @@
 PKG_NAME := i3blocks
-URL = https://github.com/vivien/i3blocks/releases/download/1.4/i3blocks-1.4.tar.gz
+URL = https://github.com/vivien/i3blocks/archive/1.5/i3blocks-1.5.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
